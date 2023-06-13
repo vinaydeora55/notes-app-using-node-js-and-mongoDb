@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% for(i=0;i< createdData.length; i++){ %>
+    <h2><%= createdData[i].title.toLocaleUpperCase() %></h2>
+    <span><%= createdData[i].postData.slice(0,20) %> .......... </span>
+    <span><a href="/posts/<%=createdData[i].title %> "  > Read More </a></span>
+<% } %>
+
+
+<%- include('partials/footer') %>
